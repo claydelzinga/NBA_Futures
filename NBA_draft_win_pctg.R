@@ -96,4 +96,15 @@ ggplot(NBA_draft_win, aes(x = draft_cap, y = win_perc, label = nba_team)) +
   labs(title = "Comparison of Teams Draft Capital with Win Percentage",
        x = "Draft Capital",
        y = "Win Percentage") +
-  theme_dark()
+  theme_dark() +
+  theme(
+    plot.background = element_rect(fill = "black", color = NA),
+    panel.background = element_rect(fill = "black", color = NA),
+    panel.grid.major = element_line(color = "gray30"),
+    panel.grid.minor = element_line(color = "gray30"),
+    axis.title = element_text(color = "white"),
+    axis.text = element_text(color = "white"),
+    plot.title = element_text(color = "white", size = 14, face = "bold"),
+    plot.subtitle = element_text(color = "white"),
+    plot.caption = element_text(color = "white")
+  )
